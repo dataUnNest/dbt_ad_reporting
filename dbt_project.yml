@@ -2,7 +2,7 @@ name: 'ad_reporting'
 version: '0.4.1'
 config-version: 2
 
-require-dbt-version: [">=0.20.0"]
+#require-dbt-version: [">=0.20.0"]
 
 vars:
   ad_reporting__pinterest_enabled: false
