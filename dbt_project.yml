@@ -18,8 +18,8 @@ vars:
       google_ads__click_performance: dossier_google_ads.dossier_click_performance
       google_ads__final_url_performance: dossier_google_ads.dossier_final_url_perfomance
       google_ads__criteria_performance: dossier_google_ads.dossier_criteria_perfomance
-      facebook_ads_schema:  'dossier_facebook_ads'
-      facebook_ads_database: 'primelis'
+    facebook_ads_schema:  'dossier_facebook_ads'
+    facebook_ads_database: 'primelis'
       
       
       
