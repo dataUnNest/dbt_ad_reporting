@@ -5,37 +5,48 @@ config-version: 2
 require-dbt-version: [">=0.20.0"]
 
 vars:
-  ad_reporting__pinterest_enabled: true
-  ad_reporting__microsoft_ads_enabled: true
-  ad_reporting__linkedin_ads_enabled: true
+  ad_reporting__pinterest_enabled: false
+  ad_reporting__microsoft_ads_enabled: false
+  ad_reporting__linkedin_ads_enabled: false
   ad_reporting__google_ads_enabled: true
-  ad_reporting__twitter_ads_enabled: true
+  ad_reporting__twitter_ads_enabled: false
   ad_reporting__facebook_ads_enabled: true
-  ad_reporting__snapchat_ads_enabled: true
-
+  ad_reporting__snapchat_ads_enabled: false
+    google_ads_source:
+      google_ads_schema: 'dossier_google_ads'
+      google_ads_database: 'primelis'
+      google_ads__click_performance: dossier_google_ads.dossier_click_performance
+      google_ads__final_url_performance: dossier_google_ads.dossier_final_url_perfomance
+      google_ads__criteria_performance: dossier_google_ads.dossier_criteria_perfomance
+      facebook_ads_schema:  'dossier_facebook_ads'
+      facebook_ads_database: 'primelis'
+      
+      
+      
+      
 models:
   ad_reporting:
     +materialized: view
   
   pinterest:
-    enabled: true
+    enabled: false
   pinterest_source:
-    enabled: true
+    enabled: false
   
   microsoft_ads:
-    enabled: true
+    enabled: false
   microsoft_ads_source:
-    enabled: true
+    enabled: false
   
   linkedin:
-    enabled: true
+    enabled: false
   linkedin_source:
-    enabled: true
+    enabled: false
   
   twitter_ads:
-    enabled: true
+    enabled: false
   twitter_ads_source:
-    enabled: true
+    enabled: false
   
   facebook_ads:
     enabled: true
@@ -50,6 +61,6 @@ models:
     enabled: true
 
   snapchat_ads:
-    enabled: true
+    enabled: false
   snapchat_ads_source:
-    enabled: true
+    enabled: false
